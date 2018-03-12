@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="智力大冲关" name="keywords">
+		<meta content="智力大冲关。" name="description">
+		<!-- 设置浏览器渲染引擎 -->
+		<meta name="renderer" content="webkit">
+		<!-- 不允许百度自动转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- Chrome 和 Android 图标 -->
+		<meta name="apple-mobile-web-app-title" content="智力大冲关" />
+		<title>智力大冲关</title>
+	</head>
+	<body>
+		<script id="template" type="text/html">
+			<div class="zlcg-login-form">
+				<form action="javascript:;">
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">姓名</span>
+						<input type="text" id="name" placeholder="请输入姓名" value="" />
+					</div>
+					{{if type == 'noReading'}}
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">在读学校</span>
+						<input type="text" id="reading-school" placeholder="请输入在读学校" value="" />
+					</div>
+					{{/if}}
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">年级</span>
+						<select id="grade" name="grade">
+							<option value="三年级">三年级</option>
+							<option value="四年级">四年级</option>
+							<option value="五年级">五年级</option>
+							<option value="六年级">六年级</option>
+							<option value="七年级">七年级</option>
+							<option value="八年级">八年级</option>
+							<option value="九年级">九年级</option>
+						</select>
+					</div>
+					{{if type == 'reading'}}
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">在读班级</span>
+						<input type="text" id="reading-class" placeholder="请输入在读班级" value="" />
+					</div>
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">班主任</span>
+						<input type="text" id="teacher" placeholder="请输入班主任" value="" />
+					</div>
+					{{/if}}
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">联系电话</span>
+						<input type="text" id="telphone" placeholder="请输入联系电话" value="" />
+					</div>
+					{{if type == 'noReading'}}
+					<div class="zlcg-from-row">
+						<span class="lcg-from-label">邀请码</span>
+						<input type="text" id="invitation-code" placeholder="请输入邀请码" value="" />
+					</div>
+					{{/if}}
+					<input type="submit" id="login-submit" value=""/>
+				</form>
+			</div>
+		</script>
+		<div id="viewport" class="background-zlcg"></div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="智力大冲关" name="keywords">
+		<meta content="智力大冲关。" name="description">
+		<!-- 设置浏览器渲染引擎 -->
+		<meta name="renderer" content="webkit">
+		<!-- 不允许百度自动转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- Chrome 和 Android 图标 -->
+		<meta name="apple-mobile-web-app-title" content="智力大冲关" />
+		<title>智力大冲关</title>
+	</head>
+	<body>
+		<script id="template" type="text/html">
+			<div class="swiper-container">
+			  	<div class="swiper-wrapper">
+			  		{{if data && data.length > 0}}
+			  			{{each data items index}}
+						    <div class="swiper-slide zlcg-subject-container swiper-no-swiping zlcg-subject-container-{{index}}">
+						    	<div class="zlcg-subject">
+						    		<h2>
+						    			<span class="zlcg-stat"></span>
+						    			<span class="zlcg-subject-name">{{subjectIndex[index]}}({{items.anwserClass | anwserClass}}){{items.name}}</span>
+						    			<span class="zlcg-countdown">{{items.endTime}}s</span>
+						    		</h2>
+						    		{{if items.image}}
+						    		<div class="zlcg-subject-img">
+						    			<img alt="{{items.name}}" src="{{items.image}}"/>
+						    		</div>
+						    		{{/if}}
+			  						{{if items.anwserClass && items.anwserClass == 'C_XZ'}}
+					  					<!--选择题-->
+							    		<div class="zlcg-select-answer">
+							    			{{if items.answerList && items.answerList.length > 0}}
+								    			{{each items.answerList answer i}}
+								    			<p><input type="radio" name="answer" id="answer-{{index}}-{{i}}" value="{{answer.isYes}}" /><label for="answer-{{index}}-{{i}}">{{answerIndex[i]}}{{answer.body}}</label></p> 
+								    			{{/each}}
+							    			{{/if}}
+							    		</div>
+							    	{{else if items.anwserClass && items.anwserClass == 'C_TK'}}
+							    		<!--填空题-->
+							    		<div class="zlcg-fill-answer">
+							    			<p>
+							    				<span class="answer-fill-title">答案</span>
+							    				<input type="text" value="" data-val = "{{items.answer}}" class="answer-fill-text"/>
+							    			</p> 
+							    		</div>
+							    	{{/if}}
+						    	</div>
+						    	<div class="zlcg-next-btn">
+						    		{{if items.anwserClass && items.anwserClass == 'C_XZ'}}
+						    		<button class="next-btn next-btn-{{index}}" data-ans-time = "{{items.endTime}}" data-anwser = "{{items.anwserClass}}" data-index = "{{index}}"></button>
+						    		{{else if items.anwserClass && items.anwserClass == 'C_TK'}}
+						    		<button class="next-btn next-btn-{{index}}" data-ans-time = "{{items.endTime}}" data-tk-body = "{{items.answer}}" data-anwser = "{{items.anwserClass}}" data-index = "{{index}}"></button>
+						    		{{/if}}
+						    	</div>
+						    </div>
+				    	{{/each}}
+				    {{/if}}
+			  	</div>
+			</div>
+		</script>
+		<div id="viewport" class="background-zlcg"></div>
+	</body>
+</html>

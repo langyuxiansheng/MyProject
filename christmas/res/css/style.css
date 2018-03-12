@@ -1,0 +1,397 @@
+.text-center{
+	text-align: center;
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+.christmas-container-content{
+	padding: 10px 15px;
+}
+.swiper-pagination-bullet-active{
+	background:#fff;
+}
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+.hide{
+	display: none;
+	visibility: hidden;
+}
+/**
+ * 第一页
+ * */
+.swiper-container .christmas-container-1,
+.swiper-container .christmas-container-2,
+.swiper-container .christmas-container-3,
+.swiper-container .christmas-container-4,
+.swiper-container .christmas-container-5,
+.swiper-container .christmas-container-6
+{
+	width: 100%;
+    height: 100%;
+    background: url(../img/2-1.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    font-size: 1.5rem;
+    color: #62fff9;
+    min-height: 100%;
+	font-family: "宋体";
+}
+
+.swiper-container .saint-nicholas-1{
+	position: absolute;
+	bottom: 0;
+	left: -50%;
+	width: 12.428571rem;
+	height: 11.785714rem;
+	background: url(../img/2-2.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	z-index: 10;
+	animation: saint-nicholas-1-ani 1s ease 1.2s 1 forwards;
+	transform-style:preserve-3d;
+	transform: rotateZ(0deg);
+}
+.swiper-container .saint-nicholas-2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 19.928571rem;
+	height: 11.571428rem;
+	background: url(../img/2-3.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	animation:saint-nicholas-2-ani 1.2s ease;
+}
+.swiper-container .saint-nicholas-3{
+	position: absolute;
+	bottom: 0;
+	right: -50%;
+	width: 8.714285rem;
+	height: 14.785714rem;
+	background: url(../img/2-4.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	animation: saint-nicholas-3-ani 1s ease 1.2s 1 forwards;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+}
+
+/*定义礼物动画*/
+@keyframes saint-nicholas-2-ani{
+	from{
+		bottom: 101%;
+	}
+	to{
+		bottom: 0;
+	}
+}
+
+/*定义圣诞老人动画*/
+@keyframes saint-nicholas-1-ani{
+	from{
+		left: -50%;
+	}
+	to{
+		left: 0;
+	}
+}
+/*定义圣诞老人循环动画*/
+.swiper-container .saint-nicholas-1-ani-while{
+	animation: saint-nicholas-1-ani-while .6s ease 0s alternate infinite;
+}
+
+/*定义圣诞树动画*/
+@keyframes saint-nicholas-3-ani{
+	from{
+		right: -50%;
+	}
+	to{
+		right: 0;
+	}
+}
+.christmas-container-1 .container-pages1-text{
+	font-size: 1.3rem;
+	font-weight: bold;
+    line-height: 2rem;
+    opacity: 0;
+    overflow: auto;
+    animation: container-pages1-text-ani 1s ease 2s 1 forwards;
+}
+
+@keyframes container-pages1-text-ani{
+	from{
+		opacity: 0;
+		margin-top: 0%;
+	}
+	to{
+		opacity: 1;
+		margin-top: 32%;
+	}
+}
+
+/*第二页*/
+.swiper-container .christmas-container-2{
+	background: url(../img/3-1.png) no-repeat 0 0;
+  	background-size: 100% 100%;
+}
+/**
+ * 定义第二页圣诞树
+ * */
+.swiper-container .christmas-container-2 .saint-nicholas-pages2-1,
+.swiper-container .christmas-container-2 .saint-nicholas-pages2-2{
+	width: 13.071428rem;
+	height: 18rem;
+	background: url(../img/3-2.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 0;
+}
+.swiper-container .christmas-container-2 .saint-nicholas-pages2-1{
+	left: -50%;
+}
+/**
+ * 定义第二页圣诞树动画
+ * */
+.saint-nicholas-pages2-1-ani{
+	animation:saint-nicholas-pages2-1-ani .8s ease 0s 1 forwards;
+}
+@keyframes saint-nicholas-pages2-1-ani{
+	from{
+		left: -50%;
+	}
+	to{
+		left: 0;
+	}
+}
+
+/**
+ * 定义第二页圣诞树老人
+ * */
+.swiper-container .christmas-container-2 .saint-nicholas-pages2-2{
+	background: url(../img/3-3.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	bottom: 0;
+	right: -50%;
+}
+/**
+ * 定义第二页圣诞树老人动画
+ * */
+.saint-nicholas-pages2-2-ani{
+	animation:saint-nicholas-pages2-2-ani .8s ease 0s 1 forwards;
+}
+
+@keyframes saint-nicholas-pages2-2-ani{
+	from{
+		right: -50%;
+	}
+	to{
+		right: 0;
+	}
+}
+
+/*定义文字*/
+.swiper-container .christmas-container-2 .christmas-container-content{
+	margin-top: 200%;
+}
+.christmas-content-2-ani{
+	animation: christmas-content-2-ani 1s ease 0.8s 1 forwards;
+}
+
+@keyframes christmas-content-2-ani{
+	from{
+		margin-top: 200%;
+	}
+	to{
+		margin-top: 0;
+	}
+}
+
+.swiper-container .christmas-container-2 .title{
+	font-size: 1.3rem;
+	margin-top: 13%;
+	color: #a7611a;
+	animation: christmas-container-2-title-ani 1.5s ease 0s alternate infinite;
+}
+
+@keyframes christmas-container-2-title-ani{
+	0%{
+		color: #ff860b;
+	}
+	50%{
+		color: #c1772c;
+	}
+	100%{
+		color: #ff8000;
+	}
+}
+
+.swiper-container .christmas-container-2 .content{
+	padding: 1.071428rem;
+	font-size: 1.2rem;
+	color: #a7611a;
+	line-height: 2rem;
+	overflow: auto;
+}
+
+/*第三页*/
+.swiper-container .christmas-container-3{
+	background: url(../img/4-1.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.christmas-container-3 .christmas-container-content{
+	margin-top: 200%;
+}
+.swiper-container .christmas-container-3 .title{
+	font-size: 1.4rem;
+    margin-top: 26%;
+    color: #4ca89e;
+}
+.swiper-container .christmas-container-3 .content{
+    font-size: 1.2rem;
+    color: #4ca89e;
+    line-height: 2rem;
+    overflow: auto;
+    padding: 10px 24px;
+}
+
+.christmas-content-3-ani{
+	animation: christmas-content-3-ani 1s ease 0s 1 forwards;
+}
+
+@keyframes christmas-content-3-ani{
+	from{
+		margin-top: 200%;
+	}
+	to{
+		margin-top: 0;
+	}
+}
+
+
+/*定义第4页*/
+.swiper-container .christmas-container-4{
+	background: url(../img/5-1.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.christmas-container-4 .christmas-container-content{
+	margin-top: 200%;
+}
+.christmas-container-4 .christmas-container-content .title{
+	font-size: 1.4rem;
+	margin-top: 18%;
+	color: #73361c;
+}
+.christmas-container-4 .christmas-container-content .content{
+	font-size: 1.2rem;
+	color: #73361c;
+	line-height: 2rem;
+    padding: 12px;
+}
+
+.christmas-content-4-ani{
+	animation: christmas-content-4-ani 1s ease 0s 1 forwards;
+}
+
+@keyframes christmas-content-4-ani{
+	from{
+		margin-top: 200%;
+	}
+	to{
+		margin-top: 0;
+	}
+}
+
+/*定义第5页*/
+.swiper-container .christmas-container-5{
+	background: url(../img/6-1.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.christmas-container-5 .christmas-container-content{
+	margin-top: 200%;
+}
+.christmas-container-5 .christmas-container-content .title{
+	font-size: 1.4rem;
+	margin-top: 18%;
+	color: #cf3387;
+}
+.christmas-container-5 .christmas-container-content .content{
+	font-size: 1.2rem;
+	color: #cf3387;
+	line-height: 2rem;
+}
+
+.christmas-content-5-ani{
+	animation: christmas-content-5-ani 1s ease 0s 1 forwards;
+}
+
+@keyframes christmas-content-5-ani{
+	from{
+		margin-top: 200%;
+	}
+	to{
+		margin-top: 0;
+	}
+}
+
+.christmas-container-5 .christmas-we-5{
+	width: 13.285714rem;
+	height: 13.214285rem;
+	background: url(../img/6-2.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	position: absolute;
+	right: -50%;
+	bottom: 0;
+}
+.christmas-we-5-ani{
+	animation:christmas-we-5-ani 1s ease 0s 1 forwards;
+}
+@keyframes christmas-we-5-ani{
+	0%{
+		right: -50%;
+	}
+	50%{
+		right: 20%;
+	}
+	100%{
+		right: 0;
+	}
+}
+
+/*定义第6*/
+.swiper-container .christmas-container-6{
+	background: url(../img/7-1.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.christmas-container-6 .christmas-container-content .title{
+	font-size: 1.4rem;
+	margin-top: 18%;
+	color: #cf3387;
+}
+.christmas-container-6 .christmas-merry-6{
+	width: 21.428571rem;
+	height: 13.214285rem;
+	background: url(../img/7-2.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	margin: 0 auto;
+    margin-top: 200%;
+    opacity: .9;
+}
+.christmas-merry-6-ani{
+	animation:christmas-merry-6-ani 2s ease 0s 1 forwards;
+}
+@keyframes christmas-merry-6-ani{
+	0%{
+	    margin-top: 200%;
+	}
+	50%{
+		margin-top: 50%;
+	}
+	100%{
+		margin-top: 60%;
+	}
+}

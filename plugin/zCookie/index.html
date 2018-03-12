@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>
+					<span>名字</span><input type="text" id="cookie-name" value="" />
+					<span>值</span><input type="text" id="cookie-value" value="" />
+					<a href="#" id="set-cookie">设置cookie</a>
+				</li>
+				<li>
+					<span>cookie值</span><input type="text" id="get-cookie-value" value="" />
+					<a href="#" id="get-cookie">获取cookie</a>
+				</li>
+				<li>
+					<span>cookie值</span><input type="text" id="cl-cookie-value" value="" />
+					<a href="#" id="cl-cookie">删除cookie</a>
+				</li>
+				<li>
+					<a href="#" id="all-cookie">删除所有</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/z-cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#set-cookie').click(function(){
+			var name = $('#cookie-name').val();
+			var val = $('#cookie-value').val();
+			$.setCookie(name,val,1);
+		});
+		
+		$('#get-cookie').click(function(){
+			var name = $('#get-cookie-value').val();
+			var getName = $.getCookie(name);
+		});
+		
+		$('#cl-cookie').click(function(){
+			var name = $('#cl-cookie-value').val();
+			var a = $.clearCookie(name);
+			console.log(a);
+		});
+		
+		$('#all-cookie').click(function(){
+			console.log($.clearAllCookie());
+		});
+	</script>
+</html>

@@ -1,0 +1,381 @@
+#viewport,
+#viewport-result{
+	width: 100%;
+	height: 100%;
+	background: url(../img/zlcg-bg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    min-height:100%;
+}
+#viewport-result{
+	background: url(../img/zlcg-result-bg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.zlcg-wellcome{
+	color: #55a795;
+	margin: 20px auto;
+	animation: wellcome 1s ease;
+}
+@keyframes wellcome{
+	0%{
+		margin: 100% auto;
+	}
+	100%{
+		margin: 20px auto;
+	}
+}
+
+.zlcg-button-box{
+	padding-top: 80%;
+	text-align: center;
+}
+.zlcg-button-box button{
+	display: block;
+	margin: 0 auto;
+	background-color: #55a795;
+	border: 1px solid #4dbaa2;
+	font-weight: bold;
+	border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 8%;
+	color: #fff;
+	font-size:  1.3rem;
+	font-family: '宋体';
+	outline:none;
+}
+.zlcg-regular{
+	width: 100%;
+  	height: 100%;
+  	position: relative;
+}
+.zlcg-regular .zlcg-regular-container{
+    position: absolute;
+    padding: 0 6%;
+    margin-top: 58%;
+    height: 47%;
+    overflow: auto;
+    z-index: 100;
+}
+
+.zlcg-regular .zlcg-regular-container .title{
+	color: #55a795;
+	font-family: '宋体';
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.zlcg-regular .zlcg-regular-container .regular-content{
+	color: #1d2088;
+}
+.regular-table{
+	width: 100%;
+	color: #1d2088;
+	text-align: center;
+	border: 1px solid #717f7f;
+    line-height: 20px;
+}
+.regular-table th{
+	font-weight: normal;
+}
+
+.regular-btn-container{
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
+}
+.regular-btn-container .zlcg-button-begin{
+    display: inline-block;
+    width: 40%;
+    height: 38px;
+    margin: 0 auto;
+    background: url(../img/begin-btn.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    border: 0;
+    border-radius: 24px;
+    outline: none;
+}
+.zlcg-login-form{
+	padding-top: 64%;
+}
+.zlcg-login-form form{
+	text-align: center;
+}
+.zlcg-login-form form .zlcg-from-row{
+	margin-bottom: 1rem;
+	color: #55a795;
+	font-size: 1.5rem;
+	font-family: '宋体';
+	font-weight: bold;
+	animation: login-form 1s ease;
+}
+@keyframes login-form{
+	0%{
+		margin: 10rem auto;
+		margin-bottom: 10rem;
+	}
+	100%{
+		margin-bottom: 1rem;
+	}
+}
+
+.zlcg-login-form form .zlcg-from-row .lcg-from-label{
+	display: inline-block;
+	text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+	width: 90px;
+    vertical-align: middle;
+}
+.zlcg-login-form form .zlcg-from-row input,
+.zlcg-login-form form .zlcg-from-row select
+{
+	display: inline-block;
+    width: 120px;
+    border: 1px solid #00af90;
+    padding: 8px 15px;
+    color: #00af90;
+}
+.zlcg-login-form form .zlcg-from-row select{
+    width: 152px;
+    font-size: 1rem;
+}
+.zlcg-login-form form .zlcg-from-row input::-webkit-input-placeholder
+{ /* WebKit browsers */
+　　color:#00af90;
+}
+
+#login-submit{
+	display: block;
+    width: 44%;
+    height: 34px;
+    background: url(../img/login_submit.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    border: 0;
+    margin: 0 auto;
+    outline: none;
+    border-radius: 10px;
+}
+.zlcg-stat{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../img/stat-bg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}    
+.zlcg-subject-container{
+	padding-top: 60%;
+}
+.zlcg-subject-container .zlcg-subject{
+    padding: 0 6%;
+}	
+.zlcg-subject-container .zlcg-subject h2{
+	padding-right: 46px;
+    font-size: 1.2rem;
+    position: relative;
+}
+.zlcg-subject-container .zlcg-subject h2 .zlcg-countdown{
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #231815;
+    padding: 0px 6px;
+    color: #e60012;
+    position: absolute;
+    top: 2px;
+    right: -2px;
+}
+.zlcg-subject-container .zlcg-subject h2 span{
+	vertical-align: middle;
+}
+.zlcg-subject-img{
+	padding: 0 25%;
+	padding-top:5px;
+}
+.zlcg-subject-img img{
+	display: block;
+	max-width: 100%;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-select-answer{
+    padding-left: 8%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10%;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-select-answer input{
+	margin-right: 4%;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-select-answer p{
+	margin: 10px auto;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-select-answer p label{
+	vertical-align: middle;
+}
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #01cd78;
+    text-indent: .15em;
+    line-height: 1; 
+}
+input[type="radio"]:checked + label::before {
+    background-color: #01cd78;
+    background-clip: content-box;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.zlcg-subject-container .zlcg-subject .zlcg-fill-answer {
+	margin-top: 1rem;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-fill-answer .answer-fill-title{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-fill-answer .answer-fill-text{
+	padding: 5px 10px;
+}
+.zlcg-subject-container .zlcg-subject .zlcg-fill-answer p{
+	text-align: center;
+}
+.zlcg-subject-container .zlcg-next-btn .next-btn{
+	display: block;
+	width: 46%;
+    height: 48px;
+ 	margin: auto;
+ 	margin-top: 2rem;
+ 	background: url(../img/next-btn.png) no-repeat 0 0;
+ 	background-size: 100% 100%;
+ 	border: none;
+ 	outline: none;
+}
+/*结果页*/
+.zlcg-result-container{
+    opacity: .7;
+    color: #5ba997;
+    font-weight: bold;
+    font-family: "\5B8B\4F53";
+    font-size: .9rem;
+    width: 100%;
+    height: 44%;
+    overflow: auto;
+    position: fixed;
+    top: 33%;
+    padding: 10px 0;
+    animation: result-container 1s ease;
+}
+
+@keyframes result-container{
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 44%;
+	}
+}
+
+
+.zlcg-result-container .zlcg-result-top,
+.zlcg-result-container .zlcg-result-bottom{
+    width: 86%;
+    background: #fff;
+    margin: 0 auto;
+    border: 1px solid #231815;
+    border-radius: 13px;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-failed{
+	display: block;
+    width: 84%;
+	margin: 0 auto;
+    border: 0;
+    border-radius:10px;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-failed img{
+	max-width: 60%;
+	display: block;
+	margin: 5px auto;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success{
+	display: block;
+    width: 100%;
+    padding: 4px 0;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .text-center img{
+	max-width: 60%;
+	display: block;
+	margin: 5px auto;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-line img{
+	display: block;
+	margin: 5px auto;
+	width: 100%;
+}
+
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-prize-code{
+	width: 100%;
+	text-align: center;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-prize-address{
+	width: 100%;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-prize-address p{
+	padding: 0px 10px;
+	overflow: hidden;
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-prize-address .prize-title{
+	display: inline-block;
+	width: 26%;
+	float: left;
+	text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+.zlcg-result-container .zlcg-result-top .zlcg-result-success .zlcg-prize-address .prize-content{
+	display: inline-block;
+    width: 74%;
+    text-align: left;
+    float: right;
+}
+.zlcg-result-container .zlcg-result-bottom{
+   margin: 20px auto;
+   padding: 10px 0;
+}
+.zlcg-result-container .zlcg-result-bottom .zlcg-result-yqcode p img{
+	display: block;
+	max-width: 100%;
+}
+.zlcg-result-container .zlcg-result-bottom .zlcg-result-yqcode p{
+	width: 100%;
+	text-align: center;
+	color: #55a795;
+	font-family: "宋体";
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 375px){
+	.regular-btn-container .zlcg-button-begin{
+		height: 44px;
+	}
+	#login-submit{
+	    width: 50%;
+   	 	height: 46px;
+ 	    margin-top: 40px;
+	}
+}
+@media only screen and (min-width: 412px){
+	#login-submit{
+   	 	height: 50px;
+	}
+}

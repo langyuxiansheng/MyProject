@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="智力大冲关" name="keywords">
+		<meta content="智力大冲关。" name="description">
+		<!-- 设置浏览器渲染引擎 -->
+		<meta name="renderer" content="webkit">
+		<!-- 不允许百度自动转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- Chrome 和 Android 图标 -->
+		<meta name="apple-mobile-web-app-title" content="智力大冲关" />
+		<title>智力大冲关</title>
+	</head>
+	<body>
+		<script id="template" type="text/html">
+			<div class="zlcg-result-container">
+				<div class="zlcg-result-top">
+					{{if data && data.answerFs < 6}}
+					<div class="zlcg-result-failed">
+						<img src="../../res/img/zlcg-failed.png"/>
+					</div>
+					{{else}}
+					<div class="zlcg-result-success">
+						<div class="text-center"><img src="../../res/img/xiaolian.png"/></div>
+						<div class="zlcg-line">
+							<img src="../../res/img/diyigenxian.png"/>
+						</div>
+						<div class="zlcg-prize-code">
+							<h1 class="text-center">{{data.answerFs | jpTitle}}</h1>
+							<p class="prize-code">{{data.body}}</p>
+							<p class="prize-code">(兑奖码：{{data.lylqCode}})</p>
+							<p class="prize-code">请凭兑奖码到博思堂校区领取</p>
+						</div>
+						<div class="zlcg-line">
+							<img src="../../res/img/diergenxian.png"/>
+						</div>
+						<div class="zlcg-prize-address">
+							<p>
+								<span class="prize-title">地&nbsp;&nbsp;址：</span>
+								<span class="prize-content">成都市锦江区菱安路266号华润中环广场四楼</span>
+							</p>
+							<p>
+								<span class="prize-title visibility-hidden">地&nbsp;&nbsp;址：</span>
+								<span class="prize-content">成都市龙泉驿区爱明街11附1号2楼</span>
+							</p>
+							<p>
+								<span class="prize-title">咨询电话：</span>
+								<span class="prize-content">028-86658589&nbsp;&nbsp;028-85081906</span>
+							</p>
+						</div>
+					</div>
+					{{/if}}
+				</div>
+				<div class="zlcg-result-bottom">
+					<div class="zlcg-result-yqcode">
+						<p><img src="../../res/img/zlcg-yqcode.png"/></p>
+						<p>
+							<span class="yqcode-title">邀请码</span>
+							<span class="yqcode-code">{{data.yqCode}}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</script>
+		<div id="viewport-result" class="background-zlcg"></div>
+	</body>
+</html>
