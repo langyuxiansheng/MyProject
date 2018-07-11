@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 设置浏览器渲染引擎 -->
+		<meta name="renderer" content="webkit">
+		<!-- 不允许百度自动转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<title></title>
+	</head>
+
+	<body>
+		<!--header-nav S-->
+		<div class="header-viewport"></div>
+		<!--header-nav E-->
+
+		<!--banner S-->
+		<div class="rh-banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="img-responsive banner-img" src="../../res/images/banner-08.png" alt="banner">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--banner E-->
+
+		<!--content S-->
+		<div class="rh-content rh-about-content container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="tab-container">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs text-center" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#brief" aria-controls="home" role="tab" data-toggle="tab">
+									企业简介
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#contact" aria-controls="profile" role="tab" data-toggle="tab">
+									联系我们
+								</a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active text-content" id="brief">
+								<p class="text-row">仁华科技是一家专业从事物联网应用研发、生产、销售、维护、运营为一体的国家高新技术企业</p>
+								<p class="text-row">仁华科技依托对车辆、车场、车主等海量信息进行提炼、分析，实现数据互换与共享，提高城市管理水平及公众服务水平，给城市规划提供决策支持，重点推动城市智慧停车便民化应用，建设高效、感知、服务民生停车生态服务体系，引导车辆有序停车，减轻交通拥堵，打造一个完善的智慧停车管理应用服务体系和可持续发展的智慧城市管理体系</p>
+								<p class="text-row">仁华科技重点打造“熊猫停车”智慧平台，向智能化、多样化、品牌化方向发展。立足四川，面向全国，让交通回归畅通，让城市回归舒适，成为智慧停车行业的领航者</p>
+							</div>
+							<div role="tabpanel" class="tab-pane text-content contact-us" id="contact">
+								<p class="text-row">电话：028-85542378</p>
+								<p class="text-row">地址：四川省成都市金牛区一品天下大街999号市民中心B座1902</p>
+								<div id="map-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--content E-->
+
+		<!--footer S-->
+		<div class="footer-viewport"></div>
+		<!--footer E-->
+	</body>
+	
+	<!--异步加载 高德地图JSAPI ，注意 callback 参数-->
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=58d947beaa66523514fdeffe22dd3c59&callback=init"></script>
+	<!--引入UI组件库异步版本main-async.js（1.0版本） -->
+	<script type="text/javascript" src="http://webapi.amap.com/ui/1.0/main-async.js"></script>
+	<script type="text/javascript">
+		function init(){
+	        var map = new AMap.Map('map-container', {
+	            center: [104.040308,30.702349],
+	            zoom: 13
+	        });
+	        
+	        map.plugin(["AMap.ToolBar"], function() {
+	            map.addControl(new AMap.ToolBar());
+	        });
+	        
+	        initAMapUI(); //这里调用initAMapUI初始化
+	        
+	        AMapUI.loadUI(['overlay/SimpleInfoWindow'], function(SimpleInfoWindow) {
+		        var marker = new AMap.Marker({
+		            map: map,
+		            zIndex: 999,
+		            position: map.getCenter()
+		        });
+		
+		        var infoWindow = new SimpleInfoWindow({
+		            infoTitle: '<strong>仁华科技</strong>',
+		            infoBody: '<p>四川省成都市金牛区一品天下大街999号市民中心B座1902</p>',
+		            //基点指向marker的头部位置
+		            offset: new AMap.Pixel(0, -31)
+		        });
+		        infoWindow.open(map, marker.getPosition());
+		    });
+	    }
+	</script>
+</html>

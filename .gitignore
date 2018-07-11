@@ -1,4 +1,8 @@
+/bositang/dist
+/bositang/node_modules
 /vue-admin/node_modules
 /vue-admin/dist
-/bositang/node_modules
-/bositang/dist
+/blog-node-server/dist
+/blog-node-server/node_modules
+/webpack-template/dist
+/webpack-template/node_modules

@@ -1,0 +1,523 @@
+@charset "utf-8";
+/**
+name:网站样式
+author:Simple
+date:2018年5月9日 15:06:31
+*/
+@import "constant";
+
+/*头部*/
+.rh-header{
+	width: 100%;
+	position: absolute;
+	top:0;
+	font-size: @font-size-20;
+	z-index: 100;
+	.rh-icon-logo,
+	.rh-icon-logo-download{
+		width: 118px;
+		height: 40px;
+		vertical-align: middle;
+		background-position: -5px -340px;
+	}
+
+	.nav{
+		margin-left: 80px;
+		display: inline-block;
+		vertical-align: middle;
+		li{
+			display: inline-block;
+			a{
+				color: @font-color-white;
+				padding: 26px 20px;
+				&:hover{
+					text-decoration: none;
+					background: none;
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.download-app{
+		color: @font-color-white;
+		margin-top: 26px;
+		&:hover{
+			text-decoration: none;
+			color: #000;
+		}
+
+		.rh-icon-download-app{
+			width: 20px;
+			height: 30px;
+			background-position: -404px -345px;
+			transition: background 0.5s;
+		}
+	}
+}
+
+.rh-header-m{
+    padding: 20px 0;
+    .rh-icon-logo{
+        display: inline-block;
+        width: 118px;
+        height: 40px;
+        vertical-align: middle;
+        background-position: -168px -340px;
+    }
+    
+    .nav-menus{
+        margin-top: 8px;
+        font-size: @font-size-20;    
+        cursor: pointer;
+    }
+    
+    .nav{
+        margin-top: 10px;
+        display: none;
+    }
+}
+
+
+/*轮播图*/
+.rh-banner{
+	.banner-img{
+//		display: inline-block;
+//		width: 100%;
+	}
+}
+
+/*内容容器*/
+.rh-content{
+    
+	.card-content{
+		margin-top: 110px;
+		color: @font-color-black;
+		max-width: 190px;
+		.title{
+			margin-top: 45px;
+			font-size: @font-size-16;
+		}
+		.text{
+			margin-top: 20px;
+			font-size: @font-size-12;
+		}
+	}
+	
+	.solution-content{
+        .solution-title{
+            margin: 206px 0 110px 0;
+            font-size: @font-size-32;
+            .solution-label{
+                margin: 0 52px;
+                .label-font{
+                    font-size: @font-size-40;
+                    font-weight: initial;
+                }
+            }
+        }
+    }
+    
+    .business-card-content{
+         max-width: 100%;
+    }
+    
+    .cases-card-content{
+        position: relative;
+        max-width: 300px;
+        .opacity-text{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            margin-bottom: 0;
+            padding: 13px 0;
+            background: rgba(0,0,0,.3);
+            color: @font-color-white;
+            font-size: @font-size-20;
+        }
+    }
+    
+    
+}
+
+.rh-about-content{
+    margin-top: -40px;
+    .tab-container{
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px #d4d9df;
+        .nav {
+            padding: 0;
+        }
+        .text-content{
+            padding: 76px 100px;
+            min-height: 450px;
+            .text-row{
+                font-size: @font-size-18;
+                margin-bottom: 48px;
+            }
+        }
+        
+        .contact-us{
+             padding: 30px 100px;
+            .text-row{
+                margin-bottom: 16px;
+            }
+            
+            #map-container{
+                width: 100%;
+                min-height: 300px;
+            }
+        }
+    }
+    .nav-tabs>li{
+        color: @font-color-about-tab-black;
+        background: @background-color-about-tab; 
+        width:50%;
+        font-size:@font-size-20;
+        &:hover{
+            border:none;
+        }
+    }
+    
+    .nav-tabs>li.active>a{
+        border: none;   
+        color: @font-color-about-tab;
+    }
+    
+    .nav-tabs>li>a,
+    .nav-tabs{
+        border:none;
+        color: @font-color-about-tab-black;
+        margin-right: 0;
+        padding: 18px 0;
+    }
+    
+    .nav-tabs>li>a:hover{
+        background: @background-color-about-tab; 
+    }
+    
+    .nav-tabs>li.active>a:hover{
+        background: @background-color-about-tab; 
+    }
+}
+
+.download-app-bg{
+    width: 100%;
+    height: 100%;
+    background: url(../images/download-app-bg.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+/*页脚部分*/
+.rh-footer{
+    margin-top: 160px;
+    background: @background-color-foorter;
+    color: @font-color-footer;
+    width: 100%;
+    bottom:0;
+    .copy-right{
+        padding: 50px 0;
+        margin-bottom: 0;
+    }
+    
+	.icon-container{
+	    padding: 40px 0;
+	    position: relative;
+		.rh-icon{
+			margin-left: 34px;
+			cursor: pointer;
+		}
+		
+		.wechat-img-qr,
+		.ios-img-qr,
+        .android-img-qr{
+            position: absolute;
+            top: -150px;
+            left: 296px;
+            width: 150px;
+            display: none;
+        }
+        
+        .ios-img-qr{
+            left: 378px;
+        }
+		
+		.android-img-qr{
+		    left: 458px;
+		}
+		
+		.rh-icon-footer-wechat:hover{
+	        background-position: -6px -555px;
+	        .wechat-img-qr{
+                display: block;
+            }
+		}
+		
+		.rh-icon-footer-ios:hover{
+            background-position: -94px -555px;
+            .ios-img-qr{
+                display: block;
+            }
+            
+        }
+        
+        .rh-icon-footer-android:hover{
+            background-position: -182px -555px;
+            .android-img-qr{
+                display: block;
+            }
+        }
+	}
+}
+
+//括号图标
+@rh-icon-brackets-width:20px;
+@rh-icon-brackets-height:86px;
+@rh-icon-footer-width:40px;
+@rh-icon-footer-height:40px;
+@rh-icon-download-width:42px;
+@rh-icon-download-height:42px;
+@rh-icon-brief-width:110px;
+@rh-icon-brief-height:110px;
+
+//图标
+.rh-icon-brackets-left{
+    width: @rh-icon-brackets-width;
+    height: @rh-icon-brackets-height;
+    background-position: -294px -503px;
+}
+
+.rh-icon-brackets-right{
+    width: @rh-icon-brackets-width;
+    height: @rh-icon-brackets-height;
+    background-position: -340px -503px;
+}
+
+.rh-icon-footer-wechat{
+    width: @rh-icon-footer-width;
+    height: @rh-icon-footer-height;
+    background-position: -6px -496px;
+    border-radius: 50%;
+}
+
+.rh-icon-footer-ios{
+    width: @rh-icon-footer-width;
+    height: @rh-icon-footer-height;
+    background-position: -94px -496px;
+    border-radius: 50%;
+}
+
+.rh-icon-footer-android{
+    width: @rh-icon-footer-width;
+    height: @rh-icon-footer-height;
+    background-position: -182px -496px;
+    border-radius: 50%;
+}
+
+.rh-icon-download-ios{
+    width: @rh-icon-download-width;
+    height: @rh-icon-download-height;
+    background-position: -2px -418px;
+}
+
+.rh-icon-download-android{
+    width: @rh-icon-download-width;
+    height: @rh-icon-download-height;
+    background-position: -84px -418px;
+}
+
+.rh-icon-scan{
+    width: @rh-icon-brief-width;
+    height: @rh-icon-brief-height;
+    background-position: -4px -10px;
+}
+
+.rh-icon-pay{
+    width: @rh-icon-brief-width;
+    height: @rh-icon-brief-height;
+    background-position: -158px -10px;
+}
+
+.rh-icon-cont{
+    width: @rh-icon-brief-width;
+    height: @rh-icon-brief-height;
+    background-position: -310px -10px;
+}
+
+.rh-icon-share{
+    width: @rh-icon-brief-width;
+    height: @rh-icon-brief-height;
+    background-position: -464px -10px;
+}
+
+.rh-header .rh-icon-logo-download{
+    background-position: -168px -340px;
+}
+
+.rh-header .download-app .rh-icon-download-app-c{
+    background-position: -337px -345px;
+}
+
+.download-panda-app{
+    width: 490px;
+    height: 130px;
+    background-position: -4px -122px;
+}
+
+
+.rh-content-download{
+    padding-top: 8%;
+    .download-l{
+        margin-top: 90px;
+    }
+    .download-app-btn{
+        position: relative;
+        
+        .ios-img-qr,
+        .android-img-qr{
+            position: absolute;
+            top: 30px;
+            left: -36px;
+            width: 150px;
+            display: none;
+        }
+        
+        .android-img-qr{
+            right: -36px;
+            left: auto;
+        }
+        
+        .download-btn-ios,
+        .download-btn-android{
+            display: inline-block;
+            border: 1px solid @font-color-about-tab;
+            color: @font-color-about-tab;
+            padding: 13px 28px;
+            border-radius: 10px;
+            font-size: @font-size-20;
+            margin: 70px 10px;
+            text-decoration:none;
+            
+            .rh-icon{
+                margin-right: 22px;
+            }
+        }
+        
+        .download-btn-ios:hover{
+            color: #fff;
+            background: @font-color-about-tab;
+            .rh-icon-download-ios{
+                background-position: -166px -418px;
+            }
+            
+            .ios-img-qr{
+                display: block;
+            }
+        }  
+        
+        .download-btn-android:hover{
+            color: #fff;
+            background: @font-color-about-tab;
+            .rh-icon-download-android{
+                background-position: -249px -418px;
+            }
+            
+            .android-img-qr{
+                display: block;
+            }
+        }
+        
+        .download-btn-android{
+            padding: 13px 22px;
+        }
+    }
+    
+    .app-brief-container{
+        background: @background-color-white;
+        min-height: 352px;
+        box-shadow: 0 4px 30px #d4d9df;
+        border-radius: 10px;
+        .title{
+            color: @font-color-about-tab;
+            font-size: @font-size-34;
+            padding-top: 60px;
+        }
+        .row{
+            margin-top: 76px;
+            color: @font-color-down-brief-black;
+        }
+    }
+}
+
+
+//小屏时的操作
+@media (max-width: 992px) {
+    
+    .rh-content{
+        
+        .card-content{
+            margin-top: 50px;
+        }
+        
+        .solution-content{
+            
+            .solution-title{
+                margin: 100px 0 60px 0;
+                font-size: @font-size-18;
+                .solution-label{
+                    margin: 0 4px;
+                    .label-font{
+                        font-size: @font-size-20;
+                        font-weight: initial;
+                    }
+                }
+            }
+        }
+    }
+    
+    .rh-about-content{
+        margin-top: 20px;
+        .tab-container{
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 30px #d4d9df;
+            .nav {
+                padding: 0;
+            }
+            .text-content{
+                padding: 26px 10px;
+                min-height: 450px;
+                .text-row{
+                    font-size: @font-size-18;
+                    margin-bottom: 48px;
+                }
+            }
+        }
+    }
+    
+    .rh-content-download{
+        padding-top: 8%;
+        .download-l{
+            margin-top: 0px;
+        }
+        .download-app-btn{
+            .download-btn-ios,
+            .download-btn-android{
+                margin: 30px 10px;
+            }
+        }
+    }
+    
+    .rh-footer{
+        margin-top: 60px;
+        
+        .icon-container{
+            text-align: center;  
+            
+            .rh-icon{
+                margin:0 18px;
+            }
+        }
+    }
+}
