@@ -11,6 +11,9 @@
 （4）vue-admin 基于Vue2.x+axios+vue-router+vuex 和 ElementUI开发的后台管理系统基础框架 
 
 （5）migu-superagent 基于 Node.js 的咪咕音乐爬虫
+	
+（6）vue-directives 基于 vue 的自定义指令
+ 
 
 工作之余开发的，项目持续更新中...... 如果项目对你有帮助，请 star. Thank You！
 
