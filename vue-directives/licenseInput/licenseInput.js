@@ -11,15 +11,23 @@ export default {
      * @param {*} vnode
      */
     bind(el, binding, vnode) {
-        //设置dom的基本属性
-        //获取焦点触发
-        el.children[0].onfocus = function() {
-            //防止重复创建
-            if (document.getElementsByClassName('license-container').length === 0) {
-                licenseInput(el, binding, vnode);
-            }
-        };
-        element = el.children[0];
+        if (el.children && el.children.length > 0) {
+            el.children[0].onfocus = function() {
+                //防止重复创建
+                if (document.getElementsByClassName('license-container').length === 0) {
+                    licenseInput(el, binding, vnode);
+                }
+            };
+            element = el.children[0];
+        } else {
+            el.onfocus = function() {
+                //防止重复创建
+                if (document.getElementsByClassName('license-container').length === 0) {
+                    licenseInput(el, binding, vnode);
+                }
+            };
+            element = el;
+        }
     },
 
     update(el, binding, vnode) {
