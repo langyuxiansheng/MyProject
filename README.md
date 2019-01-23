@@ -13,9 +13,11 @@
 （5）migu-superagent 基于 Node.js 的咪咕音乐爬虫
 	
 （6）vue-directives 基于 vue 的自定义指令
- 
+
+（7）http axios 通用请求/响应拦截器 超级好用的ajax模块 async/await风格
 
 工作之余开发的，项目持续更新中...... 如果项目对你有帮助，请 star. Thank You！
 
 # 有任何问题都可以给我留言 作者个人博客：www.hao2013.cn
+# CSND: https://blog.csdn.net/qq_33270001
 
