@@ -16,17 +16,15 @@ const utils = {
 /**
  * 小程序Http请求控制器模块
  * Created by Simple on 2019年3月22日14:05:23
- * @description  响应格式如下 {  code: 200,   data: [],  msg: 'success' }
  */
 module.exports = ({ url, method, dataType, params, data, headers }) => {
     return new Promise((resolve, reject) => {
         wx.request({
             url: `${BASE_URL}${url}`,
             method,
-            header: {
-                Authorization: wx.getStorageSync(`jwt`),
-                ...headers
-            },
+            header: Object.assign({
+                Authorization: wx.getStorageSync(`jwt`)
+            }, headers),
             dataType: dataType || 'json',
             data: data || params,
             success: (res) => {

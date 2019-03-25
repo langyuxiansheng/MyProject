@@ -5,23 +5,17 @@
 
 const request = require('./interceptor');
 const models = require('./models/index.js');
-const http = ({
-    url = '/', // DEFAULT_URL
-    method = 'get', // DEFAULT_METHOD
-    ...rest // REST_CONFIGS { data, headers, ... }  [OPTIONAL]
-}) => request({
-    url: `${url}`,
-    method,
-    ...rest
-});
-
+const config = {
+    url: '/', // DEFAULT_URL
+    method: 'get' // DEFAULT_METHOD
+};
+const http = (config) => request(config);
 module.exports = (() => {
     return Object
         .keys(models)
         .reduce((acc, apiKey) => {
-            return {
-                ...acc,
+            return Object.assign(acc, {
                 [apiKey]: data => http(models[apiKey](data))
-            };
+            });
         }, {});
 })();
